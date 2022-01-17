@@ -21,7 +21,7 @@ public class MovieController {
 
 	private MovieService movieService;
 	
-	@GetMapping(value = "/findall")
+	@GetMapping
 	public ResponseEntity<Page<MovieDTO>> findAll(Pageable pageable){
 		return ResponseEntity.status(HttpStatus.OK).body(this.movieService.findAll(pageable));
 	}
